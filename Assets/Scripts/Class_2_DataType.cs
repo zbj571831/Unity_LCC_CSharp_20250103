@@ -1,21 +1,21 @@
-using UnityEngine;
-//¤T±×½u¬OºK­n (XML»y¨¥) ¥Î¨ÓÂ²µu»¡©ú¡A¥i¥[¦bÃş§O»PÅÜ¼Æ¤W¤è
+ï»¿using UnityEngine;
+//ä¸‰æ–œç·šæ˜¯æ‘˜è¦ (XMLèªè¨€) ç”¨ä¾†ç°¡çŸ­èªªæ˜ï¼Œå¯åŠ åœ¨é¡åˆ¥èˆ‡è®Šæ•¸ä¸Šæ–¹
 /// <summary>
-/// »{ÃÑ¸ê®ÆÃş§O
+/// èªè­˜è³‡æ–™é¡åˆ¥
 /// </summary>
 public class Class_2_DataType : MonoBehaviour 
 {
-    //ÅÜ¼Æ»yªk:
-    //­×¹¢µü ÅÜ¼Æ¸ê®ÆÃş«¬ ÅÜ¼Æ¦WºÙ «ü©w ¹w³]­È;
-    //¥|¤j±`¥Î¸ê®ÆÃş§O
-    //¾ã  ¼Æ:Àx¦s¨S¦³¤p¼ÆÂIªº¼Æ­Èint
-    //¯BÂI¼Æ:Àx¦s¦³¤p¼ÆÂIªº¼Æ­È float «á­±­n¥[f¨Ò¦p:0.1f
-    //¦r  ¦ê:Àx¦s¤å¦r¡A»İ¥ÎÂù¤Ş¸¹ string «e«á»İ¥[" "¨Ò¦p:( "hi")
-    //¥¬ªL­È:Àx¦s¥¿»P¤Ïbool ¥u¦³2­Ó­È true »P false
+    //è®Šæ•¸èªæ³•:
+    //ä¿®é£¾è© è®Šæ•¸è³‡æ–™é¡å‹ è®Šæ•¸åç¨± æŒ‡å®š é è¨­å€¼;
+    //å››å¤§å¸¸ç”¨è³‡æ–™é¡åˆ¥
+    //æ•´  æ•¸:å„²å­˜æ²’æœ‰å°æ•¸é»çš„æ•¸å€¼int
+    //æµ®é»æ•¸:å„²å­˜æœ‰å°æ•¸é»çš„æ•¸å€¼ float å¾Œé¢è¦åŠ fä¾‹å¦‚:0.1f
+    //å­—  ä¸²:å„²å­˜æ–‡å­—ï¼Œéœ€ç”¨é›™å¼•è™Ÿ string å‰å¾Œéœ€åŠ " "ä¾‹å¦‚:( "hi")
+    //å¸ƒæ—å€¼:å„²å­˜æ­£èˆ‡åbool åªæœ‰2å€‹å€¼ true èˆ‡ false
     public int count =  7;
-    public float moveSpeed = 3.5f;      //¯BÂI¼Æ¥²¶·¥[F«áºó\
-    public float turnSpeed = 30.7F;     //¤j¤pf³£¥i
-    public string characcter = "»\­Û";
-    public bool isDead = false;         //¬O§_¦º¤` : ¬O
-    public bool gameOver = true;         //¬O§_µ²§ô : §_
+    public float moveSpeed = 3.5f;      //æµ®é»æ•¸å¿…é ˆåŠ Få¾Œç¶´\
+    public float turnSpeed = 30.7F;     //å¤§å°féƒ½å¯
+    public string characcter = "è“‹å€«";
+    public bool isDead = false;         //æ˜¯å¦æ­»äº¡ : æ˜¯
+    public bool gameOver = true;         //æ˜¯å¦çµæŸ : å¦
 }
