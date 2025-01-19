@@ -256,7 +256,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lv: 1
-  movSpeed: 3.6
+  movSpeed: 2.5
+  count: 10
+  weapon: "\u5315\u9996"
+  itemDescription: "\u9019\u88E1\u9762\u662F\u9053\u5177\u7684\u63CF\u8FF0\uFF0C\u9019\u88E1\u9762\u662F\u9053\u5177\u7684\u63CF\u8FF0\uFF0C\u9019\u88E1\u9762\u662F\u9053\u5177\u7684\u63CF\u8FF0\u3002"
+  hp: 100
+  attack: 30.5
+  paassword: "\u6211\u7684\u5BC6\u78BC"
+  mp: 500
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
