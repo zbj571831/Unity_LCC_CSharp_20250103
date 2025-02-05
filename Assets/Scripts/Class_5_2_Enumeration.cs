@@ -49,9 +49,33 @@ namespace jeff
         //開始事件 : 在喚醒事件後執行一次  (初始化)
         private void Start()
         {
-            Debug.Log(item);
+            
             Debug.Log ((int)item);
-            item = Item.BlueWater;
+            //列舉與判斷式 switch
+            //Switch + tab * 2 > 修改 switch_on > Enter * 2 快速完成
+            switch (item)
+            {
+                case Item.None:
+                    Debug.Log("沒有道具");
+                    break;
+                case Item.Coin:
+                    Debug.Log("金幣");
+                    break;
+                case Item.RedWater:
+                    break;
+                case Item.BlueWater:
+                    Debug.Log("藥水道具");
+                    break;
+                case Item.Chicken:
+                    Debug.Log("炸機");
+                    break;
+                default:
+                    Debug.Log("這不是道具");
+                    break;
+            }
+
+
+
         }
 
     }
