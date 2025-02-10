@@ -221,6 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 728754211}
   - component: {fileID: 728754210}
+  - component: {fileID: 728754212}
   m_Layer: 0
   m_Name: "\u8AB2\u7A0B_6_\u8FF4\u5708\u8207\u9663\u5217"
   m_TagString: Untagged
@@ -235,7 +236,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728754209}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8802d9503af1a74468dcf8e8521941b8, type: 3}
   m_Name: 
@@ -255,6 +256,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &728754212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728754209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a74a02d4c1b37d44aa5a1f54336cbaee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card1: "\u76AE\u5361\u4E18"
+  card2: "\u5C0F\u706B\u9F8D"
+  card3: "\u5361\u6BD4\u7378"
+  cards:
+  - "\u8D85\u5922"
+  - "\u5922\u5E7B"
+  - "\u5217\u7A7A\u5EA7"
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  deck1:
+  - 
+  - 
+  - 
+  - 
+  - 
+  deck2:
+  - "\u6025\u51CD\u9CE5"
+  - "\u8CED\u971E"
+  - "\u5BF6\u77F3\u6D77\u661F"
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

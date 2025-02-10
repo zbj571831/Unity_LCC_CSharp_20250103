@@ -1,56 +1,56 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 namespace jeff 
 {
     /// <summary>
-    /// ¤ÏÂĞ¹Bºâ³¯­z¦¡ : °j°é
-    /// for ` foreach ` do »P while
+    /// åè¦†é‹ç®—é™³è¿°å¼ : è¿´åœˆ
+    /// for ` foreach ` do èˆ‡ while
     /// </summary>
     public class Class_6_1_Iteration : MonoBehaviour
     {
         private void Awake()
         {
-            #region °j°éwhile ` do` for
-            //°j°é½Ğ¦b¤@¦¸©Ê¨Æ¥ó¤º¨Ï¥Î Awake ` Start
-            //while °j°é : ·í¥¬ªL­È¬° true ®É·|«ùÄò°õ¦æ
-            //while (¥¬ªL­È) { µ{¦¡°Ï¶ô }
-            //µL­­°j°é : ¥¬ªL­È¤@ª½¬O true
-            //«Å§i°Ï°ìÅÜ¼Æ i ¬° 0 
+            #region è¿´åœˆwhile ` do` for
+            //è¿´åœˆè«‹åœ¨ä¸€æ¬¡æ€§äº‹ä»¶å…§ä½¿ç”¨ Awake ` Start
+            //while è¿´åœˆ : ç•¶å¸ƒæ—å€¼ç‚º true æ™‚æœƒæŒçºŒåŸ·è¡Œ
+            //while (å¸ƒæ—å€¼) { ç¨‹å¼å€å¡Š }
+            //ç„¡é™è¿´åœˆ : å¸ƒæ—å€¼ä¸€ç›´æ˜¯ true
+            //å®£å‘Šå€åŸŸè®Šæ•¸ i ç‚º 0 
             int i = 0;
-            i = 5;              //´ú¸Õ while »P do ªº®t²§
-            //·í i < 5 ´N°õ¦æ {}
+            i = 5;              //æ¸¬è©¦ while èˆ‡ do çš„å·®ç•°
+            //ç•¶ i < 5 å°±åŸ·è¡Œ {}
             while (i < 5)
             {
-                Debug.Log($"<color=#f33>while °j°é¡A i :{i}</color>");
-                //i »¼¼W (i + 1)
+                Debug.Log($"<color=#f33>while è¿´åœˆï¼Œ i :{i}</color>");
+                //i éå¢ (i + 1)
                 i++;
             }
 
-            //do °j°é :
-            //do { µ{¦¡°Ï¶ô } while (¥¬ªL­È)
+            //do è¿´åœˆ :
+            //do { ç¨‹å¼å€å¡Š } while (å¸ƒæ—å€¼)
             int j = 0;
-            j = 5;              //´ú¸Õ while »P do ªº®t²§
+            j = 5;              //æ¸¬è©¦ while èˆ‡ do çš„å·®ç•°
             do
             {
-                Debug.Log($"<color=#f79>do °j°é¡A j :{j}</color>");
+                Debug.Log($"<color=#f79>do è¿´åœˆï¼Œ j :{j}</color>");
             }
             while (j < 5);
 
-            //for °j°é :
-            //for (ªì©l­È ; ¥¬ªL­È ; ­¡¥N¾¹) {µ{¦¡°Ï¶ô}
+            //for è¿´åœˆ :
+            //for (åˆå§‹å€¼ ; å¸ƒæ—å€¼ ; è¿­ä»£å™¨) {ç¨‹å¼å€å¡Š}
             for (int k = 0; k < 5; k++)
             {
-                Debug.Log($"<color=#78f>for °j°é¡A k :{k}</color>");
+                Debug.Log($"<color=#78f>for è¿´åœˆï¼Œ k :{k}</color>");
             }
             #endregion
 
-            //foreach °j°é
-            //¸ê®Æµ²ºc : °}¦C ` ²M³æµ¥µ¥...
-            //foreach ¸ê®ÆÃş«¬ ¸ê®Æ¦WºÙ in ¸ê®Æµ²ºc ) {µ{¦¡°Ï¶ô}
-            //¦r¦ê´N¬O¤@ºØ¸ê®Æµ²ºc¡A¥Î¨Ó¦s©ñ char ªº°}¦C
-            string dialogue = "¶Ù¡A§A¦n¡A§Ú¬Onpc~";
-            //foreach °j°é±N§ì¥Xdialogue ªº¨C¤@­Ó¦r¨Ã¦s©ñ¦b°Ï°ìÅÜ¼Æ text¤º
-            //var µLÃş«¬
+            //foreach è¿´åœˆ
+            //è³‡æ–™çµæ§‹ : é™£åˆ— ` æ¸…å–®ç­‰ç­‰...
+            //foreach è³‡æ–™é¡å‹ è³‡æ–™åç¨± in è³‡æ–™çµæ§‹ ) {ç¨‹å¼å€å¡Š}
+            //å­—ä¸²å°±æ˜¯ä¸€ç¨®è³‡æ–™çµæ§‹ï¼Œç”¨ä¾†å­˜æ”¾ char çš„é™£åˆ—
+            string dialogue = "å—¨ï¼Œä½ å¥½ï¼Œæˆ‘æ˜¯npc~";
+            //foreach è¿´åœˆå°‡æŠ“å‡ºdialogue çš„æ¯ä¸€å€‹å­—ä¸¦å­˜æ”¾åœ¨å€åŸŸè®Šæ•¸ textå…§
+            //var ç„¡é¡å‹
             foreach (var text in dialogue)
             {
                 Debug.Log ($"<color=#f63>{text}</color>");

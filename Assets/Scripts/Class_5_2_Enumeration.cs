@@ -1,38 +1,38 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 namespace jeff 
 {
     /// <summary>
-    /// ¦CÁ| : enumeration¡AC# ¤ºÃöÁä¦r¬°Â²¼g enum
+    /// åˆ—èˆ‰ : enumerationï¼ŒC# å…§é—œéµå­—ç‚ºç°¡å¯« enum
     /// </summary>
     public class Class_5_2_Enumeration : MonoBehaviour
     {
-        #region »{ÃÑ¦CÁ|
-        //¦CÁ| : ©w¸q¤U©Ô¿ï³æªº¿ï¶µ (³q±`³£¬O³æ¿ï)
-        //»yªk :
-        //­×¹¢µü ÃöÁä¦r enum ¦CÁ|¦WºÙ { ¦CÁ|¿ï¶µ }
-        //©w¸q¤@­Ó¦CÁ|¡A¦WºÙ¥s©u¸`
-        //¦CÁ|³£¬O¼Æ­È¡A¹w³]±q 0 ¶}©l
+        #region èªè­˜åˆ—èˆ‰
+        //åˆ—èˆ‰ : å®šç¾©ä¸‹æ‹‰é¸å–®çš„é¸é … (é€šå¸¸éƒ½æ˜¯å–®é¸)
+        //èªæ³• :
+        //ä¿®é£¾è© é—œéµå­— enum åˆ—èˆ‰åç¨± { åˆ—èˆ‰é¸é … }
+        //å®šç¾©ä¸€å€‹åˆ—èˆ‰ï¼Œåç¨±å«å­£ç¯€
+        //åˆ—èˆ‰éƒ½æ˜¯æ•¸å€¼ï¼Œé è¨­å¾ 0 é–‹å§‹
         private enum Season
         {
-            //©w¸q¦CÁ|¿ï¶µ
+            //å®šç¾©åˆ—èˆ‰é¸é …
             Spring, Summer, Autumn, Winnter
         }
-        //«Å§iÅÜ¼Æ¡AÃş«¬¬°©u¸`¦CÁ|¡A¹w³]­È¬°®L¤Ñ
-        [SerializeField, Header("©u¸`")]
+        //å®£å‘Šè®Šæ•¸ï¼Œé¡å‹ç‚ºå­£ç¯€åˆ—èˆ‰ï¼Œé è¨­å€¼ç‚ºå¤å¤©
+        [SerializeField, Header("å­£ç¯€")]
         private Season season = Season.Summer;
 
         private void Awake()
         {
-            //¨ú±o¦CÁ|ªº­È (Get) §ì¥X­È
+            //å–å¾—åˆ—èˆ‰çš„å€¼ (Get) æŠ“å‡ºå€¼
             Debug.Log(season);
-            //¨ú±o¦CÁ|ªº­È
+            //å–å¾—åˆ—èˆ‰çš„å€¼
             Debug.Log((int)season);
 
-            //³]©w¦CÁ|ªº¾ã¼Æ­È (Set) ­×§ï­È 
+            //è¨­å®šåˆ—èˆ‰çš„æ•´æ•¸å€¼ (Set) ä¿®æ”¹å€¼ 
             season = Season.Winnter;
             Debug.Log(season);
-            //¨q¹L¼Æ­È³]©w¦CÁ|
+            //ç§€éæ•¸å€¼è¨­å®šåˆ—èˆ‰
             season = (Season)2;
             Debug.Log(season);
         } 
@@ -42,35 +42,35 @@ namespace jeff
         {
             None = 0, Coin = 1,RedWater = 10 ,BlueWater = 15 , Chicken = 20
         }
-        [SerializeField , Header("¹D¨ã")]
+        [SerializeField , Header("é“å…·")]
         private Item item = Item.Chicken;
 
-        //°õ¦æ¶¶§Ç : Awake > Start >Update
-        //¶}©l¨Æ¥ó : ¦b³ê¿ô¨Æ¥ó«á°õ¦æ¤@¦¸  (ªì©l¤Æ)
+        //åŸ·è¡Œé †åº : Awake > Start >Update
+        //é–‹å§‹äº‹ä»¶ : åœ¨å–šé†’äº‹ä»¶å¾ŒåŸ·è¡Œä¸€æ¬¡  (åˆå§‹åŒ–)
         private void Start()
         {
             
             Debug.Log ((int)item);
-            //¦CÁ|»P§PÂ_¦¡ switch
-            //Switch + tab * 2 > ­×§ï switch_on > Enter * 2 §Ö³t§¹¦¨
+            //åˆ—èˆ‰èˆ‡åˆ¤æ–·å¼ switch
+            //Switch + tab * 2 > ä¿®æ”¹ switch_on > Enter * 2 å¿«é€Ÿå®Œæˆ
             switch (item)
             {
                 case Item.None:
-                    Debug.Log("¨S¦³¹D¨ã");
+                    Debug.Log("æ²’æœ‰é“å…·");
                     break;
                 case Item.Coin:
-                    Debug.Log("ª÷¹ô");
+                    Debug.Log("é‡‘å¹£");
                     break;
                 case Item.RedWater:
                     break;
                 case Item.BlueWater:
-                    Debug.Log("ÃÄ¤ô¹D¨ã");
+                    Debug.Log("è—¥æ°´é“å…·");
                     break;
                 case Item.Chicken:
-                    Debug.Log("¬µ¾÷");
+                    Debug.Log("ç‚¸æ©Ÿ");
                     break;
                 default:
-                    Debug.Log("³o¤£¬O¹D¨ã");
+                    Debug.Log("é€™ä¸æ˜¯é“å…·");
                     break;
             }
 
