@@ -11,6 +11,7 @@ namespace jeff
         //2. 透過變數取得非靜態資料(成員)
         public Class_7_2_Static class_7_2;
 
+
         private void Awake()
         {
             Debug.Log($"<color=#f3d>非靜態成員 :{class_7_2.inventorvWater}</color>");
@@ -28,6 +29,25 @@ namespace jeff
             //呼叫靜態方法
             Class_7_2_Static.Kick();
         }
+
+        public Class_7_2_Slime slimeGreen, slimeBlue;
+
+        private void Start()
+        {
+            //非靜態成員
+            slimeGreen.hp -= 10;
+            Debug.Log($"<color=#3f3>綠色史萊姆 HP : {slimeGreen.hp}</color>");
+            slimeBlue.hp -= 10;
+            Debug.Log($"<color=#3f3>綠色史萊姆 HP : {slimeBlue.hp}</color>");
+
+            //靜態成員
+            //靜態成員沒辦法透過個體存取
+            //slimeGreen.moveSpeed = 3.5f;
+            Class_7_2_Slime.moveSpeed = 3.5f;
+            Debug.Log($"<color=#3f3>綠色史萊姆移動速度 : {Class_7_2_Slime.moveSpeed}</color>");
+        }
+
+
     }
 }
 
