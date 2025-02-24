@@ -6,7 +6,7 @@ namespace jeff
     /// <summary>
     /// 裝箱 Boxing 與拆箱 Unboxing
     /// </summary>
-    public class Class_9_1_Boxing
+    public class Class_9_1_Boxing : MonoBehaviour
     {
         // 實值型別的資料類別
         // 結構 . 列舉 . 整數 . 浮點數 . 字元
@@ -28,7 +28,7 @@ namespace jeff
 
             //拆箱 Unboxing
             //將參考型別資料放到實值型別資料內
-            //在前方添加 (要轉換的資料)
+            //在前方添加 (要轉換的資料類型)
             count = (int)boxNumber;
             LogSystem.LogWithColor(count.ToString(), "#f33");
 
