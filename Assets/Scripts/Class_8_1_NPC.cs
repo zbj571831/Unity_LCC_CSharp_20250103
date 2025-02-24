@@ -17,9 +17,14 @@ namespace jeff
             Debug.Log("<color=#f3d>預設建構子</color>");
         }
 
-        public Class_8_1_NPC(string _name)
+        //建構子的簡寫
+        public Class_8_1_NPC(string _name) => name = _name;
+
+        public Class_8_1_NPC(string _name, string _dialogue)
         {
+
             name = _name;
+            diialogue = _dialogue;  
             Debug.Log("<color=#f3d>有參數的建構子</color>");
         }
         public void LogName()
