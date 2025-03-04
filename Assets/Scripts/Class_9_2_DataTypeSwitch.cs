@@ -1,6 +1,7 @@
 ﻿using jeff.Tools;
 using Unity.Mathematics;
 using UnityEngine;
+using System;
 
 namespace jeff
 {
@@ -57,6 +58,28 @@ namespace jeff
 
             LogSystem.LogWithColor("------------", "#ff3");
 
+        }
+
+        private void Start()
+        {
+            //將整數轉為字串
+            int count = 99;
+            var intToString = Convert.ToString(count);
+            LogSystem.LogWithColor(intToString.GetType(), "#F96");
+            //將布林值轉為字串
+            bool isOver = false;
+            var boolToString = Convert.ToString(isOver);
+            LogSystem.LogWithColor(boolToString.GetType(), "#F96");
+            
+            float move = 3.5f;
+            var floatToByte = Convert.ToString(move);
+            LogSystem.LogWithColor(floatToByte.GetType(), "#F96");
+
+            //true = 1, false = 0
+            bool isGrounded = true;
+            var boolToByte = Convert.ToByte(isGrounded);
+            LogSystem.LogWithColor(boolToByte, "#6f6");
+            LogSystem.LogWithColor(boolToByte.GetType(), "#6f6");
         }
     }
 }
