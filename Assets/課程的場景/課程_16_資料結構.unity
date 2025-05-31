@@ -220,6 +220,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1022087718}
+  - component: {fileID: 1022087719}
   m_Layer: 0
   m_Name: "\u8AB2\u7A0B_16_\u8CC7\u6599\u7D50\u69CB"
   m_TagString: Untagged
@@ -242,6 +243,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1022087719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022087717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f482f0ce2ffd745b32bbf2442440db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attacks: 0a0000000f00000007000000
+  defens:
+  - 1.5
+  - 7.5
+  - 0.3
+  speeds: 030000000900000007000000
+  props:
+  - "\u85E5\u6C34"
+  - "\u5730\u5716"
+  playerDefens: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
