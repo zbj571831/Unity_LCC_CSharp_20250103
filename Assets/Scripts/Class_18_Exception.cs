@@ -11,6 +11,7 @@ namespace jeff
     {
         private void Awake()
         {
+            #region 處理例外
             LogSystem.LogWithColor($"{Division(8, 4)}", "#f33");
             LogSystem.LogWithColor($"{Division(3, 9)}", "#f33");
             LogSystem.LogWithColor($"{Division(7, 0)}", "#f33");
@@ -21,8 +22,29 @@ namespace jeff
             LogSystem.LogWithColor($"{GetScores(9)}", "#f33");
 
             SetEnemy();
+            #endregion
+            try
+            {
+                Damage(70);
+                Damage(35);
+            }
+            catch (Exception e)
+            {
+                LogSystem.LogWithColor(e, "#fa9");
+            }
+
+            try
+            {
+                Cure(30);
+                Cure(-10);
+            }
+            catch (CurValueLowerZeroException e)
+            {
+                LogSystem.LogWithColor(e.Message, "#7F3");
+            }
         }
 
+        #region 處理例外
         /// <summary>
         /// 除法
         /// </summary>
@@ -44,11 +66,11 @@ namespace jeff
                 return null;
             }
             // 最後區域
-            finally 
+            finally
             {
                 LogSystem.LogWithColor($"例外處理完畢", "#f73");
             }
-            
+
         }
 
         private int[] scores = { 70, 91, 64, 53, 88 };
@@ -59,7 +81,7 @@ namespace jeff
             {
                 return scores[index];
             }
-            catch (DivideByZeroException) 
+            catch (DivideByZeroException)
             {
                 LogSystem.LogWithColor($"發生例外", "#f11");
                 return null;
@@ -90,5 +112,51 @@ namespace jeff
                 LogSystem.LogWithColor($"發生例外 : {e.Message}", "#f39");
             }
         }
+        #endregion
+
+        private float hp = 100;
+
+        private void Damage(float damage)
+        {
+            hp -= damage;
+
+            if (hp < 0)
+            {
+                throw new Exception("血量小於0");
+
+            }
+            else
+            {
+                LogSystem.LogWithColor($"血量 : {hp}", "#93f");
+            }
+        }
+
+        private void Cure(float cure)
+        {
+            
+
+            if (cure < 0)
+            {
+                //throw new Exception("血量小於0");
+                throw new CurValueLowerZeroException("治療值低於零");
+
+            }
+            else
+            {
+                hp += cure;
+            }
+        }
     }
+}
+
+/// <summary>
+/// 治療值低於零例外
+/// </summary>
+public class CurValueLowerZeroException : Exception
+{
+    /// <summary>
+    /// 建構子
+    /// </summary>
+    /// <param name="message">例外訊息</param>
+    public CurValueLowerZeroException(string message) : base(message) { }
 }
