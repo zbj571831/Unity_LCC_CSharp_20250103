@@ -27,6 +27,10 @@ namespace jeff
 
         public event Action<string, float> onDeadAction;
 
+        // C# 內建的事件 : 無參數 ` 有參數
+        public event EventHandler onEvent;
+        public event EventHandler<float> onEventWithHP;
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Alpha1)) Damage(5);
@@ -40,9 +44,11 @@ namespace jeff
             {
                 LogSystem.LogWithColor("玩家死亡", "#f99");
                 //步驟 2. 呼叫事件
-                onDead?.Invoke();                   // ? 問號 l判斷 onDead 如果有訂閱者才會呼叫
+                onDead?.Invoke();                         // ? 問號 l判斷 onDead 如果有訂閱者才會呼叫
 
-                onDeadAction?.Invoke("玩家", hp);   // 事件有參數時呼叫要帶入
+                onDeadAction?.Invoke("玩家", hp);         // 事件有參數時呼叫要帶入
+                onEvent?.Invoke(this, EventArgs.Empty);  // 呼叫內建事件必須要有兩個參數
+                onEventWithHP?.Invoke(this, hp);         // 呼叫內建事件有參數
             }
         }
     }

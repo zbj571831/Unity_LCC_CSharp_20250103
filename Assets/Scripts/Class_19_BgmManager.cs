@@ -18,6 +18,18 @@ namespace jeff
             // 輸入 += 可以使用 Tab 自動完成 > 命名方法後 > Enter 完成
             class_19_event.onDead += ChangeBgm;
             class_19_event.onDeadAction += ChangeBgmViaHP;
+            class_19_event.onEvent += ChangeBgmEvent;
+            class_19_event.onEventWithHP += ChangeBgmEventWithHP;
+        }
+
+        private void ChangeBgmEventWithHP(object sender, float e)
+        {
+            LogSystem.LogWithColor($"發送事件者 : {sender}, 參數 : {e}", "#ff3");
+        }
+
+        private void ChangeBgmEvent(object sender, System.EventArgs e)
+        {
+            LogSystem.LogWithColor($"發送事件者 : {sender}, 參數 : {e}", "#ff3");
         }
 
         private void ChangeBgmViaHP(string arg1, float arg2)
